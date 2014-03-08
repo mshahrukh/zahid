@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <windows.h>
+#include <iostream>
+ #include <conio.h>
+ using namespace std;
+ 
+
+int main(){
+   int i, c=219;
+ char ch; 
+   FILE *fp;
+    
+	system("cls") ; 
+	printf("\n\n\n\n\n\n\n\t\t\t\t");
+	for(i=0;i<10;i++)
+	
+	
+	{  
+	
+	
+	
+	 Sleep(100);  /* Takes a character from user */
+	    cout<<"";
+        printf("%c",c);
+       
+        
+    
+	}
+	
+		
+		system("cls");
+			
+	
+		 fp = fopen("program.txt","r"); // read mode
+ 
+   if( fp == NULL )
+   {
+      perror("Error while opening the file.\n");
+      exit(EXIT_FAILURE);
+   }
+ 	printf("\t\t\t\t\t\t\t\t\t\t\t\t\t");
+   printf("%s",fp);
+ 
+   while( ( ch = fgetc(fp) ) != EOF )
+ 
+      printf("%c",ch);
+ 
+   fclose(fp);
+   
+   	system("cls") ;
+   
+   
+   
+   
+   
+   
+   	printf("\n\n\n\n\n\n\n");
+    return 0;
+}

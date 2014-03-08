@@ -1,0 +1,183 @@
+1.
+#include<stdio.h> 
+#include<conio.h> 
+int main(void) 
+{ 
+    int a[100]; 
+    int i,j=1,k; 
+    for(i=0; i<=100; ++i) 
+    { 
+        a[i]=j; 
+        j=j+2; 
+    } 
+    for(i=0; i<100; ++i) 
+    { 
+        printf("%d) %d\n",i+1,a[i]); 
+    } 
+    getch(); 
+    return 0; 
+} 
+
+2.
+#include<stdio.h> 
+#include<stdlib.h> 
+#include<conio.h> 
+int main() 
+{ 
+    int random_numbers[50]; 
+    int i,j,k; 
+    printf("Random Numbers Are:\n"); 
+    for(i=0; i<50; i++) 
+    { 
+        j=rand()%100+1; 
+        random_numbers[i]=j; 
+    } 
+    for(i=0; i<50; i++) 
+    { 
+        printf("%d\n",random_numbers[i]); 
+    } 
+    getch(); 
+    return 0; 
+} 
+
+3.
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+    int i,j,n; 
+    printf("Enter size of Array:\n"); 
+    scanf("%d",&n); 
+    int array[n]; 
+    printf("Enter numbers:\n"); 
+    for(i=0; i<n; i++) 
+    { 
+        scanf("%d",&array[i]); 
+    } 
+    for(i=0; i<n; i++) 
+    { 
+        printf("%d,\t",array[i]); 
+    } 
+    getch(); 
+    return 0; 
+} 
+4.
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+    int a[80]; 
+    int i,j,x=-1,c,b; 
+    printf("First 80 prime numbers:\n"); 
+        for(i=0; i<410; ++i) 
+    { 
+        c=0; 
+        for(j=1; j<=i; ++j) 
+        { 
+            if(i%j==0) 
+            ++c; 
+        } 
+    if(c==2) 
+    { 
+        ++x; 
+        a[x]=i; 
+    } 
+    } 
+    for(x=0; x<80; ++x) 
+    { 
+        printf("%i) %i\n",x+1,a[x]); 
+    } 
+    getch(); 
+    return 0; 
+} 
+5.
+/* C program to sort the array in the ascending order */
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+    int ar[100],j,n,i,tmp; 
+    printf(" Enter the size of the array \n"); 
+    scanf("%d",&n); 
+    printf("Now enter the elements in the array \n"); 
+    for(i=0;i<n;i++) 
+    { 
+        scanf("%d",&ar[i]); 
+    } 
+    printf("\n Array is = "); 
+    for(i=0;i<n;i++) 
+    { 
+        printf("\t %d",ar[i]); 
+    } 
+    for(i=0;i<n;i++) 
+    { 
+        for(j=0;j<n-i;j++) 
+        { 
+            if(ar[j]>ar[j+1]) 
+            { 
+                tmp=ar[j]; 
+                ar[j]=ar[j+1]; 
+                ar[j+1]=tmp; 
+            } 
+        } 
+    } 
+    printf("\n\n Array in the ascending order is = \n"); 
+    for(i=0;i<n;i++) 
+    { 
+        printf("\t %d",ar[i]); 
+    } 
+    getch(); 
+    return 0; 
+} 
+6.
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+    int i,j=1,k=0,n,temp; 
+    printf("Enter size of arry\n"); 
+    scanf("%d",&n); 
+    int a[n]; 
+    int b[n]; 
+    for(i=0; i<n; i++) 
+    { 
+        a[i]=j; 
+        j=j+2; 
+    } 
+    for(i=0; i<n; i++) 
+    { 
+        b[i]=k; 
+        k=k+2; 
+    } 
+    printf("Odd Numbers Are:\n"); 
+    for(i=0; i<n; i++) 
+    { 
+        printf("%d,\t",a[i]); 
+    } 
+    printf("\n"); 
+    printf("Even Numbers Are:\n"); 
+    for(i=0; i<n; i++) 
+    { 
+        printf("%d,\t",b[i]); 
+    } 
+    printf("\n\nAfter Sorting :\n\n\n"); 
+    for(i=0; i<n; i++) 
+    { 
+        temp=a[i]; 
+        a[i]=b[i]; 
+        b[i]=temp; 
+    } 
+    printf("Odd Numbers Are:\n"); 
+    for(i=0; i<n; i++) 
+    { 
+        printf("%d,\t",a[i]); 
+    } 
+    printf("\n"); 
+    printf("Even Numbers Are:\n"); 
+    for(i=0; i<n; i++) 
+    { 
+        printf("%d,\t",b[i]); 
+    } 
+    getch(); 
+    return 0; 
+} 
